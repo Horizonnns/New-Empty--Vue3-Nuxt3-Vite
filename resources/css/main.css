@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+/* Убирает стрелочки с input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Убирает стрелочки с input */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* fonts */
+@layer base {
+  @font-face {
+    font-family: 'GTWalsheimPro';
+    font-weight: 400;
+    src: url('/resources/fonts/GTWalsheimPro-Regular.woff2') format('woff2'),
+      url('/resources/fonts/GTWalsheimPro-Regular.woff') format('woff'),
+      url('/resources/fonts/GTWalsheimPro-Regular.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'GTWalsheimPro';
+    font-weight: 700;
+    src: url('/resources/fonts/GTWalsheimPro-Bold.woff2') format('woff2'),
+      url('/resources/fonts/GTWalsheimPro-Bold.woff') format('woff'),
+      url('/resources/fonts/GTWalsheimPro-Bold.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'GTWalsheimPro';
+    font-weight: 800;
+    src: url('/resources/fonts/GTWalsheimPro-Black.woff2') format('woff2'),
+      url('/resources/fonts/GTWalsheimPro-Black.woff') format('woff'),
+      url('/resources/fonts/GTWalsheimPro-Black.ttf') format('ttf');
+  }
+}
+/* fonts */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333;
+  font-family: 'GTWalsheimPro';
+}
